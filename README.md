@@ -135,42 +135,50 @@ Inserting these css classes into your note frontmatter will style your notes ind
 
 
 # Installation
-## Normal Installation
-Go to your theme folder (`.obsidian/themes`) and run:
+## Normal installation
+1. Open Obsidian and go to Settings → Appearance → Themes → Manage.
+2. Search for NeoPpuccin and click Install.
 
+Recommended: Install the [Style Settings](https://github.com/community-archive/obsidian-style-settings) plugin to customize the theme.
+1. Open Obsidian and go to Settings → Community plugins → Browse.
+2. Search for Style Settings and click Install, then enable the plugin.
+3. Under community plugins, click Style Settings → Open Style Settings and customize the theme to your liking.
+
+## Github repo clone
+You can also install NeoPpuccin by cloning the github repo directly into your theme folder. This is recommended if you want to contribute to the theme or if you want to use the latest development version of the theme.
+Go to your theme folder (`.obsidian/themes`) and run:
 ```sh
 git clone git@github.com:notnotnescap/NeoPpuccin.git
 ```
-## Updating
-Go to your NeoPpuccin folder (`.obsidian/themes/NeoPpuccin`) and run:
-
-```sh
-git pull
-```
-
-## Building
-Clone the github repo and run `sass src/base.scss theme.css` (or `make`) in the root folder.
+To compile the theme from source, you will need to have [Sass](https://sass-lang.com/install) installed. Then you can run `sass src/base.scss theme.css` (or `make`) in the root folder.
 
 ## Colorschemes 
 
-| Theme                                                     | Light Mode | Dark Mode | Extra Notes                                                                                                                 |
-| --------------------------------------------------------- | ---------- | --------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [Atom](https://github.com/kognise/obsidian-atom)          | Yes        | Yes       | Accent value is hardcoded into the theme.                                                                                   |
-| [Catppuccin](https://github.com/catppuccin/catppuccin)    | Yes        | Yes       | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
-| Coffee                                                    | No         | Yes       | Custom colorscheme                                                                                                          |
-| [Biscuit](https://github.com/Biscuit-Colorscheme/biscuit) | Yes        | Yes       | -                                                                                                                           |
-| [Everforest](https://github.com/sainnhe/everforest)       | Yes        | Yes       | -                                                                                                                           |
-| [Dracula](https://github.com/dracula/dracula-theme)       | No         | Yes       | -                                                                                                                           |
-| [Gruvbox](https://github.com/morhetz/gruvbox)             | Yes        | Yes       | -                                                                                                                           |
-| [Nord](https://github.com/arcticicestudio/nord)           | Yes        | Yes       | A custom darker variant of the dark theme is included as well. <br> Accent value is hardcoded into the theme.               |
-| Notion                                                    | Yes        | Yes       | -                                                                                                                           |
-| [Kanagawa](https://github.com/rebelot/kanagawa.nvim)      | No         | Yes       | -                                                                                                                           |
-| [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes        | Yes       | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet.                                    |
-| [Rosebox](https://github.com/KraXen72/rosebox)            | No         | Yes       | Accent value is hardcoded into the theme.                                                                                   |
-| [Royal Velvet](https://github.com/caro401/royal-velvet)   | No         | Yes       | -                                                                                                                           |
-| Sandy Beaches                                             | Yes        | No        | Provided by [melnhh](https://github.com/melnhh)                                                                             |
-| [Solarized](https://github.com/altercation/solarized)     | Yes        | Yes       | -                                                                                                                           |
-| [thorns](https://codeberg.org/rini/thorns)                | No         | Yes       | -                                                                                                                           |
+| Theme | Light Mode | Dark Mode | Extra Notes |
+| --- | --- | --- | --- |
+| AMOLED Dark | No | Yes | Custom colorscheme |
+| [Atom](https://github.com/kognise/obsidian-atom) | Yes | Yes | Accent value is hardcoded into the theme. |
+| [Biscuit](https://github.com/Biscuit-Colorscheme/biscuit) | Yes | Yes | - |
+| [Catppuccin](https://github.com/catppuccin/catppuccin) | Yes | Yes | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
+| Coffee | No | Yes | Custom colorscheme |
+| Dark (Generic) | No | Yes | Custom colorscheme |
+| [Dracula](https://github.com/dracula/dracula-theme) | No | Yes | - |
+| [Everforest](https://github.com/sainnhe/everforest) | Yes | Yes | - |
+| [Flexoki](https://github.com/kepano/flexoki) | No | Yes | - |
+| [Gruvbox](https://github.com/morhetz/gruvbox) | Yes | Yes | - |
+| [Kanagawa](https://github.com/rebelot/kanagawa.nvim) | No | Yes | - |
+| Luminescence | Yes | No | Custom colorscheme |
+| Material Gruvbox | No | Yes | Custom colorscheme |
+| Material Mint | Yes | Yes | Custom colorscheme |
+| [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well.<br>Accent value is hardcoded into the theme. |
+| Notion | Yes | Yes | - |
+| [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | - |
+| [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | Accent value is hardcoded into the theme. |
+| [Royal Velvet](https://github.com/caro401/royal-velvet) | No | Yes | - |
+| Sandy Beaches | Yes | No | Provided by [melnhh](https://github.com/melnhh) |
+| [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
+| [thorns](https://codeberg.org/rini/thorns) | No | Yes | - |
+| [Tokyo Night](https://github.com/folke/tokyonight.nvim) | No | Yes | - |
 
 <details>
 
