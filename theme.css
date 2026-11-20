@@ -6190,7 +6190,7 @@ body.anp-card-layout .workspace-split:has(.workspace-sidedock-vault-profile) .wo
 }
 body.anp-card-layout .workspace-split:has(.workspace-sidedock-vault-profile) .workspace-sidedock-vault-profile {
   border: 1px solid var(--tab-outline-color);
-  border-top: none;
+  border-top: 1px solid var(--tab-outline-color);
   border-radius: 0 0 var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl));
   margin: 0 var(--anp-card-layout-padding, 10px) var(--anp-card-layout-padding, 10px);
   background-color: var(--card-foreground-color);
