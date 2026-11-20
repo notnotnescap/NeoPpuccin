@@ -343,7 +343,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 
             --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
             --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
-            border-color: rgb(var(--ctp-subtext0)) !important;
+            border-color: rgb(var(--ctp-subtext0));
         }
     }
 
@@ -617,7 +617,7 @@ $labels: (
 .anp-speech-bubble [data-task="8"],
 .anp-speech-bubble [data-task="9"] {
     margin-inline-start: -15px;
-    padding: 3px 10px !important; //hacky but it works i guess
+    padding: 3px 10px; //hacky but it works i guess
     border-radius: 3px 10px 10px 10px;
     max-width: fit-content;
     color: var(--text-normal);
@@ -700,7 +700,7 @@ $labels: (
     &[data-task="7"],
     &[data-task="8"],
     &[data-task="9"] {
-        text-indent: 0px !important;
+        text-indent: 0px;
     }
 }
 

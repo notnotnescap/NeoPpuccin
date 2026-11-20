@@ -90,12 +90,12 @@ $ext-theme-list: $theme-atom-light, $theme-amoled-dark, $theme-atom-dark,
 }
 
 .theme-dark.anp-theme-ext-amoled {
-	--ctp-ext-surface2: 80, 80, 80 !important;
-	--ctp-ext-surface1: 50, 50, 50 !important;
-	--ctp-ext-surface0: 30, 30, 30 !important;
-	--ctp-ext-base: 10, 10, 10 !important;
-	--ctp-ext-mantle: 5, 5, 5 !important;
-	--ctp-ext-crust: 0, 0, 0 !important;
+	--ctp-ext-surface2: 80, 80, 80;
+	--ctp-ext-surface1: 50, 50, 50;
+	--ctp-ext-surface0: 30, 30, 30;
+	--ctp-ext-base: 10, 10, 10;
+	--ctp-ext-mantle: 5, 5, 5;
+	--ctp-ext-crust: 0, 0, 0;
 }
 
 @each $theme-name in $ext-theme-list {

@@ -4205,12 +4205,10 @@ settings:
   --color-accent-2: rgba(var(--ctp-accent), 0.9);
   --text-selection: rgba(var(--ctp-accent), 0.25);
   --interactive-accent: rgb(var(--ctp-accent));
-  --interactive-accent-hover: rgba(var(--ctp-accent), 0.9);
   --text-accent: rgb(var(--ctp-accent));
   --text-accent-hover: rgb(var(--ctp-accent));
   --text-highlight-bg: rgba(var(--ctp-accent), 0.4);
   --text-highlight-bg-active: rgba(var(--ctp-accent), 0.6);
-  --interactive-accent: rgb(var(--ctp-accent));
   --interactive-accent-rgb: var(--ctp-accent);
   --interactive-accent-hover: rgb(var(--ctp-accent));
   --blockquote-border-color: rgb(var(--ctp-accent));
@@ -4408,12 +4406,12 @@ body {
 }
 
 .theme-dark.anp-theme-ext-amoled {
-  --ctp-ext-surface2: 80, 80, 80 !important;
-  --ctp-ext-surface1: 50, 50, 50 !important;
-  --ctp-ext-surface0: 30, 30, 30 !important;
-  --ctp-ext-base: 10, 10, 10 !important;
-  --ctp-ext-mantle: 5, 5, 5 !important;
-  --ctp-ext-crust: 0, 0, 0 !important;
+  --ctp-ext-surface2: 80, 80, 80;
+  --ctp-ext-surface1: 50, 50, 50;
+  --ctp-ext-surface0: 30, 30, 30;
+  --ctp-ext-base: 10, 10, 10;
+  --ctp-ext-mantle: 5, 5, 5;
+  --ctp-ext-crust: 0, 0, 0;
 }
 
 .theme-light.ctp-atom-light,
@@ -5381,7 +5379,6 @@ body {
 }
 .markdown-source-view.mod-cm6 .edit-block-button:hover {
   background-color: var(--background-secondary);
-  background-color: var(--background-secondary);
   opacity: 1;
 }
 
@@ -5584,7 +5581,6 @@ input.slider,
   .anp-print .print,
   body.anp-print,
   .anp-print .markdown-rendered,
-  :root:has(.anp-print),
   :root {
     background-color: rgb(var(--ctp-base));
   }
@@ -5987,7 +5983,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
   /*-------CONFIGS---------*/
 }
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
-  margin: 5px 0 !important;
+  margin: 5px 0;
 }
 .anp-safari-tab-toggle .workspace-split.mod-vertical.mod-root .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner .workspace-tab-header:not(.is-active) {
   --icon-color: var(--text-muted);
@@ -6071,9 +6067,9 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   background: var(--tab-background);
   border-radius: var(--anp-safari-tab-radius, 6px);
-  box-shadow: none !important;
+  box-shadow: none;
   height: var(--tab-height);
-  padding: 0 !important;
+  padding: 0;
   transition: 400ms, background-color 150ms ease-in-out;
 }
 
@@ -6132,7 +6128,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-sp
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-  color: var(--color-accent) !important;
+  color: var(--color-accent);
 }
 
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover {
@@ -6236,7 +6232,7 @@ body.anp-card-layout.anp-hide-borders {
   --tab-outline-color: transparent;
 }
 body.anp-card-layout.anp-hide-borders .menu {
-  border: 0px !important;
+  border: 0px;
 }
 body.anp-card-layout .sidebar-toggle-button,
 body.anp-card-layout .workspace-tabs.mod-top {
@@ -6680,7 +6676,6 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 }
 .anp-fixed-status-bar.anp-card-layout .status-bar, .anp-fixed-status-bar.anp-border-layout .status-bar {
   --status-bar-border-width: 0;
-  --status-bar-background: transparent;
   --status-bar-border-color: transparent;
   --status-bar-background: var(--card-background-color);
 }
@@ -6862,7 +6857,7 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 .callout-content > h4,
 .callout-content > h5,
 .callout-content > h6 {
-  margin: 0 !important;
+  margin: 0;
 }
 
 /*---------------CALLOUT COLORS----------------*/
@@ -6903,18 +6898,18 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   width: fit-content;
   height: fit-content;
   mix-blend-mode: normal;
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .callout[data-callout=formula] .callout-title .callout-icon,
 .callout[data-callout=formula] .callout-title .callout-fold {
   display: none;
 }
 .callout[data-callout=formula] .callout-title {
-  background-color: rgb(from var(--callout-color) r g b/0.05) !important;
+  background-color: rgb(from var(--callout-color) r g b/0.05);
   color: var(--ctp-text);
 }
 .callout[data-callout=formula] .callout-content {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .callout[data-callout=formula] .callout-content ul,
 .callout[data-callout=formula] .callout-content ol {
@@ -8094,7 +8089,7 @@ body.rainbow-tags {
 .anp-color-transition-toggle .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
 .anp-color-transition-toggle .mod-root .workspace-tabs .workspace-leaf,
 .anp-color-transition-toggle .setting-item-name {
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out !important;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
 }
 
 .callout[data-callout=capacities-card] {
@@ -8340,14 +8335,14 @@ body {
 }
 .cards table.dataview tbody > tr > td > ul {
   width: 100%;
-  padding: 0.25em 0 !important;
-  margin: 0 auto !important;
+  padding: 0.25em 0;
+  margin: 0 auto;
 }
 .cards table.dataview tbody > tr > td {
   /* Images */
 }
 .cards table.dataview tbody > tr > td:has(img) {
-  padding: 0 !important;
+  padding: 0;
   background-color: var(--background-secondary);
   display: block;
   margin: 0;
@@ -8373,11 +8368,11 @@ body {
 .dataview.table-view-table > tbody > tr > td,
 table.dataview tbody > tr > td {
 	border-bottom: none;
-	padding: 0!important;
+	padding: 0;
 	line-height: 1.2;
 	width: calc(100% - var(--cards-padding));
 	margin: 0 auto;
-	overflow: visible !important;
+	overflow: visible;
 	max-width: 100%;
 	display: flex;
 }
@@ -8460,7 +8455,7 @@ table.dataview tbody > tr > td {
 }
 .cards table.dataview thead > tr > th {
   display: block;
-  padding: 3px 30px 3px 6px !important;
+  padding: 3px 30px 3px 6px;
   border-radius: var(--radius-s);
   width: 100%;
   font-weight: 400;
@@ -8599,13 +8594,13 @@ Minimal cards are a snippet designed by Kepano for the Minimal theme.
 None of the original code was used in this theme, and the following code is merely some tweaks to the snippet.
 --------------------------------------------*/
 .cards .table-view-table > tbody > tr > td:last-child {
-  border-bottom-color: transparent !important;
+  border-bottom-color: transparent;
   /*-No border for last cell-*/
 }
 .cards .table-view-table > tbody > tr > td:first-child {
-  width: 100% !important;
+  width: 100%;
   /*-Max width for first cell-*/
-  border-bottom: 1px dashed var(--background-modifier-border) !important;
+  border-bottom: 1px dashed var(--background-modifier-border);
   /*-Border for first table that spans to the end because of max width-*/
 }
 .cards .table-view-table > tbody > tr > td:first-child span {
@@ -8613,7 +8608,7 @@ None of the original code was used in this theme, and the following code is mere
   /*-Add padding to text-*/
 }
 .cards .table-view-table > tbody > tr > td:first-child span a {
-  padding: 0 !important;
+  padding: 0;
   /*-0 padding on link-*/
 }
 .cards .table-view-table > tbody > tr > td:not(:last-child):not(:first-child) > .el-p.el-p.el-p:not(.el-embed-image) {
@@ -8801,10 +8796,10 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
 }
 
 .anp-colorful-frame .sidebar-toggle-button {
-  padding: var(--size-4-1) !important;
+  padding: var(--size-4-1);
   background-color: var(--colorful-frame-color);
-  --tab-container-background: var(--colorful-frame-color) !important;
-  --sidebar-tab-container-background: var(--colorful-frame-color) !important;
+  --tab-container-background: var(--colorful-frame-color);
+  --sidebar-tab-container-background: var(--colorful-frame-color);
   height: calc(var(--header-height) - 5px);
   margin-right: 0;
   border-radius: 0 0 var(--radius-m) var(--radius-m);
@@ -8814,10 +8809,10 @@ body.anp-colorful-frame-icon-toggle-dark.theme-dark {
   --icon-color-focused: var(--colorful-icon-color-alt);
 }
 .anp-colorful-frame .sidebar-toggle-button .clickable-icon {
-  --icon-color: var(--colorful-icon-color-alt) !important;
-  --icon-color-hover: var(--colorful-icon-color) !important;
-  --icon-color-active: var(--colorful-icon-color-alt) !important;
-  --icon-color-focused: var(--colorful-icon-color-alt) !important;
+  --icon-color: var(--colorful-icon-color-alt);
+  --icon-color-hover: var(--colorful-icon-color);
+  --icon-color-active: var(--colorful-icon-color-alt);
+  --icon-color-focused: var(--colorful-icon-color-alt);
 }
 
 .anp-colorful-frame:not(.anp-card-layout, .anp-border-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -9333,7 +9328,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .anp-custom-checkboxes [data-task="/"] > p > input[type=checkbox]:checked, .anp-custom-checkboxes [data-task="/"][type=checkbox]:checked {
   --checkbox-color: rgba(var(--ctp-subtext0), 0.3);
   --checkbox-color-hover: rgba(var(--ctp-subtext0), 0.3);
-  border-color: rgb(var(--ctp-subtext0)) !important;
+  border-color: rgb(var(--ctp-subtext0));
 }
 .anp-custom-checkboxes [data-task="<"] > input[type=checkbox]:checked:after,
 .anp-custom-checkboxes [data-task="<"] > p > input[type=checkbox]:checked:after, .anp-custom-checkboxes [data-task="<"][type=checkbox]:checked:after {
@@ -9582,7 +9577,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .anp-speech-bubble [data-task="8"],
 .anp-speech-bubble [data-task="9"] {
   margin-inline-start: -15px;
-  padding: 3px 10px !important;
+  padding: 3px 10px;
   border-radius: 3px 10px 10px 10px;
   max-width: fit-content;
   color: var(--text-normal);
@@ -9694,7 +9689,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 
 /* Dirty Speech Bubble Fix */
 .anp-speech-bubble .HyperMD-task-line[data-task="0"], .anp-speech-bubble .HyperMD-task-line[data-task="1"], .anp-speech-bubble .HyperMD-task-line[data-task="2"], .anp-speech-bubble .HyperMD-task-line[data-task="3"], .anp-speech-bubble .HyperMD-task-line[data-task="4"], .anp-speech-bubble .HyperMD-task-line[data-task="5"], .anp-speech-bubble .HyperMD-task-line[data-task="6"], .anp-speech-bubble .HyperMD-task-line[data-task="7"], .anp-speech-bubble .HyperMD-task-line[data-task="8"], .anp-speech-bubble .HyperMD-task-line[data-task="9"] {
-  text-indent: 0px !important;
+  text-indent: 0px;
 }
 
 .anp-speech-bubble [data-task="0"] {
@@ -9886,24 +9881,24 @@ body.anp-properties-card-toggle .metadata-container:not(:has(.metadata-property)
 
 /*--------------DISABLING IN-FRONTMATTER---------------*/
 .heading-normal-toggle {
-  --h1-color: var(--text-normal) !important;
-  --h2-color: var(--text-normal) !important;
-  --h3-color: var(--text-normal) !important;
-  --h4-color: var(--text-normal) !important;
-  --h5-color: var(--text-normal) !important;
-  --h6-color: var(--text-normal) !important;
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
 }
 
 .decorations-normal-toggle,
 .decorations-normal-toggle.markdown-rendered {
-  --bold-color: var(--text-normal) !important;
-  --italic-color: var(--text-normal) !important;
+  --bold-color: var(--text-normal);
+  --italic-color: var(--text-normal);
 }
 
 .decorations-normal-toggle.markdown-rendered .table-view-table,
 .decorations-normal-toggle.is-live-preview .table-view-table {
-  --bold-color: var(--text-muted) !important;
-  --italic-color: var(--text-muted) !important;
+  --bold-color: var(--text-muted);
+  --italic-color: var(--text-muted);
 }
 
 /*===============================================================
@@ -12232,7 +12227,7 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
 }
 
 .style-settings-container .style-settings-heading[data-id=neoppuccin-support] .setting-item-name {
-  color: var(--color-accent) !important;
+  color: var(--color-accent);
 }
 
 .style-settings-container .themed-color-wrapper {
@@ -12372,7 +12367,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12397,7 +12391,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12422,7 +12415,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12447,7 +12439,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12472,7 +12463,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12497,7 +12487,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12522,7 +12511,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12547,7 +12535,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12572,7 +12559,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12597,7 +12583,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12622,7 +12607,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
   height: calc(var(--font-ui-medium) + 3px);
   width: calc(var(--font-ui-medium) + 3px);
   margin-left: calc(-0.5 * var(--size-4-1));
-  margin-right: calc(var(--size-4-2) - 3px);
   transition: transform 0.1s;
   vertical-align: text-top;
   margin-right: 0;
@@ -12760,7 +12744,6 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
 
 .dataview.inline-field-standalone-value,
 .dataview.inline-field-value {
-  text-decoration: underline;
   text-decoration-line: underline;
   text-decoration-color: rgba(var(--ctp-yellow), 0.4);
 }
@@ -12803,7 +12786,7 @@ body.rainbow-repeat-1.rainbow-color-1-lavender [data-type=bookmarks] .tree-item:
 }
 
 .excalidraw.theme--dark.excalidraw .App-menu__left {
-  --button-hover-bg: rgba(var(--ctp-surface2), 0.6) !important;
+  --button-hover-bg: rgba(var(--ctp-surface2), 0.6);
 }
 
 .excalidraw .HintViewer {
@@ -12932,22 +12915,22 @@ div[class*=recent-files-] {
 
 /* Recolor Colors */
 div[class*=mk-] [style*="--label-color:#eb3b5a"] {
-  --label-color: rgb(var(--ctp-red)) !important;
+  --label-color: rgb(var(--ctp-red));
 }
 div[class*=mk-] [style*="--label-color:#fa8231"] {
-  --label-color: rgb(var(--ctp-peach)) !important;
+  --label-color: rgb(var(--ctp-peach));
 }
 div[class*=mk-] [style*="--label-color:#f7b731"] {
-  --label-color: rgb(var(--ctp-yellow)) !important;
+  --label-color: rgb(var(--ctp-yellow));
 }
 div[class*=mk-] [style*="--label-color:#0fb9b1"] {
-  --label-color: rgb(var(--ctp-teal)) !important;
+  --label-color: rgb(var(--ctp-teal));
 }
 div[class*=mk-] [style*="--label-color:#2d98da"] {
-  --label-color: rgb(var(--ctp-blue)) !important;
+  --label-color: rgb(var(--ctp-blue));
 }
 div[class*=mk-] [style*="--icon-color:#ffffff"] {
-  --icon-color: rgb(var(--ctp-base)) !important;
+  --icon-color: rgb(var(--ctp-base));
 }
 
 /* Context card view */
@@ -13014,22 +12997,22 @@ div[class*=mk-] [style*="--icon-color:#ffffff"] {
 
 /* Recolor Colors */
 .mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#eb3b5a"]) {
-  --label-color: rgb(var(--ctp-red)) !important;
+  --label-color: rgb(var(--ctp-red));
 }
 .mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#fa8231"]) {
-  --label-color: rgb(var(--ctp-peach)) !important;
+  --label-color: rgb(var(--ctp-peach));
 }
 .mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#f7b731"]) {
-  --label-color: rgb(var(--ctp-yellow)) !important;
+  --label-color: rgb(var(--ctp-yellow));
 }
 .mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#0fb9b1"]) {
-  --label-color: rgb(var(--ctp-teal)) !important;
+  --label-color: rgb(var(--ctp-teal));
 }
 .mk-tree-item:has(.mk-file-icon > button[style*="--label-color:#2d98da"]) {
-  --label-color: rgb(var(--ctp-blue)) !important;
+  --label-color: rgb(var(--ctp-blue));
 }
 .mk-tree-item:has(.mk-file-icon > button[style*="--icon-color:#ffffff"]) {
-  --icon-color: rgb(var(--ctp-base)) !important;
+  --icon-color: rgb(var(--ctp-base));
 }
 
 .mk-tree-text.nav-file-title-content {
@@ -13353,7 +13336,7 @@ body:not(.is-mobile):not(.anp-hide-status-bar) .kanban-plugin__board > div {
   width: auto;
 }
 .kanban-plugin__lane-wrapper .kanban-plugin__lane-items > .kanban-plugin__placeholder:not(:only-child) {
-  border-width: 0 !important;
+  border-width: 0;
 }
 .kanban-plugin__lane-wrapper.is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder {
   border-color: var(--background-modifier-border);
@@ -13455,25 +13438,25 @@ body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-p
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item {
   border: none;
   box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item .kanban-plugin__item-content-wrapper {
   background: var(--notion-kanban-card);
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item .kanban-plugin__item-content-wrapper .kanban-plugin__item-title-wrapper {
   background: var(--notion-kanban-darken);
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item .kanban-plugin__item-content-wrapper .kanban-plugin__item-title-wrapper .kanban-plugin__item-prefix-button-wrapper {
   margin-right: 6px;
   box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
   border-radius: 3px;
   background: var(--notion-kanban-card);
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item .kanban-plugin__item-content-wrapper .kanban-plugin__item-title-wrapper .kanban-plugin__item-prefix-button-wrapper:hover {
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
   background: var(--notion-kanban-card-hover);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item .kanban-plugin__item-content-wrapper .kanban-plugin__item-title-wrapper .kanban-plugin__item-prefix-button-wrapper:hover .kanban-plugin__item-prefix-button {
@@ -13507,14 +13490,14 @@ body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-p
   rotate: 90deg;
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item:hover {
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item:hover .kanban-plugin__item-content-wrapper {
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
   background-color: var(--notion-kanban-card-hover);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item:hover .kanban-plugin__item-content-wrapper .kanban-plugin__item-title-wrapper {
-  transition: background var(--kanban-transition) !important;
+  transition: background var(--kanban-transition);
   background-color: var(--notion-kanban-darken-hover);
 }
 body.anp-kanban-notion .kanban-plugin__lane .kanban-plugin__lane-items .kanban-plugin__item-wrapper .kanban-plugin__item:hover .kanban-plugin__item-content-wrapper .kanban-plugin__item-postfix-button-wrapper {
@@ -13577,32 +13560,14 @@ body.anp-kanban-notion .kanban-plugin__item-input {
   display: flex;
 }
 
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)),
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]),
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)),
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) {
-  width: 44px !important;
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) {
+  width: 44px;
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__lane-header-wrapper,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-header-wrapper,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__lane-header-wrapper,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-header-wrapper {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__lane-header-wrapper {
   border-width: 0;
   gap: 10px;
   position: absolute;
@@ -13610,93 +13575,39 @@ body.anp-kanban-notion .kanban-plugin__item-input {
   transform: rotate(90deg);
   z-index: 1;
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__lane-grip,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-grip,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__lane-grip,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-grip {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__lane-grip {
   transform: rotate(-90deg);
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__lane-settings-button-wrapper,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-settings-button-wrapper,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__lane-settings-button-wrapper,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__lane-settings-button-wrapper {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__lane-settings-button-wrapper {
   display: none;
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__item-wrapper,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-wrapper,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__item-wrapper,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-wrapper {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__item-wrapper {
   display: none;
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__placeholder:only-child,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__placeholder:only-child,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__placeholder:only-child,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__placeholder:only-child {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__placeholder:only-child {
   display: none;
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__new-item-button,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__new-item-button,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__new-item-button,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__new-item-button {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__new-item-button {
   font-size: 0;
 }
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__item-button-plus,
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-button-plus,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) .kanban-plugin__item-button-plus,
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-.kanban-plugin__item:not(.is-search-miss),
-.kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) .kanban-plugin__item-button-plus {
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) .kanban-plugin__item-button-plus {
   font-size: 0.875rem;
 }
 
 .anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper {
-  width: 44px !important;
+  width: 44px;
 }
 .anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes .kanban-plugin__drag-container[style*="width: 54px;"] .kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
   border-width: 0;

@@ -68,7 +68,7 @@
 }
 
 .style-settings-container .style-settings-heading[data-id="neoppuccin-support"] .setting-item-name {
-    color: var(--color-accent) !important;
+    color: var(--color-accent);
 }
 
 .style-settings-container .themed-color-wrapper {
@@ -233,7 +233,6 @@ $headingIcons: (
                 height: calc(var(--font-ui-medium) + 3px);
                 width: calc(var(--font-ui-medium) + 3px);
                 margin-left: calc(-0.5*var(--size-4-1));
-                margin-right: calc(var(--size-4-2) - 3px);
                 transition: transform 0.1s;
                 vertical-align: text-top;
                 margin-right: 0;

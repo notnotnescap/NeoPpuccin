@@ -1,5 +1,5 @@
 @mixin collapseLane {
-    width: 44px !important;
+    width: 44px;
 
     .kanban-plugin__lane-header-wrapper {
         border-width: 0;
@@ -54,15 +54,14 @@
     }
 }
 
-.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
-.anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper)) {
-
-    .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-            .kanban-plugin__item:not(.is-search-miss),
-            .kanban-plugin__item-form)),
-    .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"],
-            .kanban-plugin__item:not(.is-search-miss),
-            .kanban-plugin__item-form))~.kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"]) {
+// A lane collapses into a 44px strip when it holds no real content. Both collapse
+// toggle states and the trailing-empty-lane case are collected in one :is()
+// instead of a crossed selector list, so the built output repeats the :has()
+// selectors once per declaration block instead of four times over.
+:is(.anp-kanban-collapse-lanes:not(.anp-kanban-uncollapse-lanes),
+    .anp-kanban-collapse-lanes.anp-kanban-uncollapse-lanes:not(:has(.kanban-plugin__drag-container > .kanban-plugin__item-wrapper))) {
+    :is(.kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)),
+        .kanban-plugin__lane-wrapper:not(:has(.kanban-plugin__lane[data-count="0"], .kanban-plugin__item:not(.is-search-miss), .kanban-plugin__item-form)) ~ .kanban-plugin__lane-wrapper:has(.kanban-plugin__lane[data-count="0"])) {
         @include collapseLane;
     }
 }

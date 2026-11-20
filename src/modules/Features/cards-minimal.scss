@@ -6,14 +6,14 @@ None of the original code was used in this theme, and the following code is mere
     .table-view-table {
         >tbody>tr>td {
             &:last-child {
-                border-bottom-color: transparent !important;
+                border-bottom-color: transparent;
                 /*-No border for last cell-*/
             }
 
             &:first-child {
-                width: 100% !important;
+                width: 100%;
                 /*-Max width for first cell-*/
-                border-bottom: 1px dashed var(--background-modifier-border) !important;
+                border-bottom: 1px dashed var(--background-modifier-border);
 
                 /*-Border for first table that spans to the end because of max width-*/
                 span {
@@ -21,7 +21,7 @@ None of the original code was used in this theme, and the following code is mere
 
                     /*-Add padding to text-*/
                     a {
-                        padding: 0 !important;
+                        padding: 0;
                         /*-0 padding on link-*/
                     }
                 }
