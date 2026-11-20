@@ -247,6 +247,104 @@ settings:
     type: class-toggle
     default: true
 
+# Colors :: Scrollbars
+
+-
+    id: anp-scrollbars-header
+    title: Scrollbars
+    description: Colour of the scrollbar thumb in the active theme
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: anp-scrollbar-color
+    title: Scrollbar Colour
+    description: Thumb colour. The track stays transparent. Defaults to Overlay 0.
+    type: variable-select
+    default: rgb(var(--ctp-overlay0))
+    options:
+    -
+        label: Theme Accent
+        value: rgb(var(--ctp-accent))
+    -
+        label: Rosewater
+        value: rgb(var(--ctp-rosewater))
+    -
+        label: Flamingo
+        value: rgb(var(--ctp-flamingo))
+    -
+        label: Pink
+        value: rgb(var(--ctp-pink))
+    -
+        label: Mauve
+        value: rgb(var(--ctp-mauve))
+    -
+        label: Red
+        value: rgb(var(--ctp-red))
+    -
+        label: Maroon
+        value: rgb(var(--ctp-maroon))
+    -
+        label: Peach
+        value: rgb(var(--ctp-peach))
+    -
+        label: Yellow
+        value: rgb(var(--ctp-yellow))
+    -
+        label: Green
+        value: rgb(var(--ctp-green))
+    -
+        label: Teal
+        value: rgb(var(--ctp-teal))
+    -
+        label: Sky
+        value: rgb(var(--ctp-sky))
+    -
+        label: Sapphire
+        value: rgb(var(--ctp-sapphire))
+    -
+        label: Blue
+        value: rgb(var(--ctp-blue))
+    -
+        label: Lavender
+        value: rgb(var(--ctp-lavender))
+    -
+        label: Text
+        value: rgb(var(--ctp-text))
+    -
+        label: Subtext 1
+        value: rgb(var(--ctp-subtext1))
+    -
+        label: Subtext 0
+        value: rgb(var(--ctp-subtext0))
+    -
+        label: Overlay 2
+        value: rgb(var(--ctp-overlay2))
+    -
+        label: Overlay 1
+        value: rgb(var(--ctp-overlay1))
+    -
+        label: Overlay 0
+        value: rgb(var(--ctp-overlay0))
+    -
+        label: Surface 2
+        value: rgb(var(--ctp-surface2))
+    -
+        label: Surface 1
+        value: rgb(var(--ctp-surface1))
+    -
+        label: Surface 0
+        value: rgb(var(--ctp-surface0))
+    -
+        label: Base
+        value: rgb(var(--ctp-base))
+    -
+        label: Mantle
+        value: rgb(var(--ctp-mantle))
+    -
+        label: Crust
+        value: rgb(var(--ctp-crust))
+
 # Colors :: Color Overrides
 
 -

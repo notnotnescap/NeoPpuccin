@@ -14,6 +14,18 @@ body.anp-border-layout {
     // the frame colour, exactly as the card layout does.
     --tab-container-background: var(--card-background-color);
 
+    // Same scrollbar corner nudge as the card layout: the editor's scrollbar runs under the
+    // rounded top-right corner of the border frame. Nudge the scroll container down and take
+    // the same amount off its top padding so the text stays put.
+    // The `:not(.is-mobile)` is needed for specificity: Obsidian's own
+    // `.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller`
+    // sets `padding: var(--file-margins)` with five classes and would otherwise keep
+    // the 32px padding, pushing the text down with the margin.
+    &:not(.is-mobile) .workspace-split.mod-root .cm-scroller {
+        margin-top: 12px;
+        padding-top: 20px;
+    }
+
     .sidebar-toggle-button,
     .workspace-tabs.mod-top {
         --tab-container-background: var(--card-background-color);

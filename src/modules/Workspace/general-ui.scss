@@ -23,6 +23,19 @@
     margin-top: 20px;
 }
 
+/*-Scrollbars in theme colours-*/
+// Obsidian 1.13+ paints scrollbars from these variables: the plain body rule uses
+// `scrollbar-color`, and the `styled-scrollbars` webkit rules read the same values, so both
+// paths follow the active Catppuccin flavour. The track stays transparent.
+// Obsidian's `.mod-macos`/`.mod-windows`/`.mod-linux` block re-declares the thumb as `gray`,
+// so match the platform class as well or the plain `body` rule loses the cascade.
+// `--anp-scrollbar-color` is written by the Scrollbar Colour style setting.
+body:is(.mod-macos, .mod-windows, .mod-linux) {
+    --scrollbar-thumb-bg: var(--anp-scrollbar-color, rgb(var(--ctp-overlay0)));
+    --scrollbar-bg: transparent;
+    --scrollbar-active-thumb-bg: var(--anp-scrollbar-color, rgb(var(--ctp-overlay1)));
+}
+
 /*-Disable scrollbars-*/
 .anp-toggle-scrollbars,
 .anp-toggle-scrollbars * {

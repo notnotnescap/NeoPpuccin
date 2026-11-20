@@ -225,6 +225,13 @@ body.anp-card-layout:not(.is-phone) {
         margin-bottom: var(--anp-card-layout-padding, 10px);
     }
 
+    // The editor's scrollbar runs into the rounded top-right corner. Nudge the scroll container
+    // down a little and take the same amount off its top padding so the text stays put.
+    .workspace-split.mod-root .cm-scroller {
+        margin-top: 12px;
+        padding-top: 20px;
+    }
+
     // Merge the sidebar's last pane into the vault profile below it so the two read as one card.
     // This has to outrank the rule above, which otherwise restores the pane's bottom radius, its
     // bottom border and its margin, leaving the profile as a detached strip.
