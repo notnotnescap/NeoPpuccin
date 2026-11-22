@@ -3545,6 +3545,147 @@ settings:
     type: variable-number
     default: 0.15
 
+# Workspace :: Custom Background
+
+-
+    id: anp-custom-background-header
+    title: Custom Background
+    description: Put an image behind the interface and float the panes over it
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: anp-background-image-toggle
+    title: Enable custom background
+    description: Panes become translucent so the image shows through. A colourful frame keeps its own colours
+    type: class-toggle
+-
+    id: anp-custom-bg-fit
+    title: Image fill
+    description: How the image covers the window
+    type: variable-select
+    default: cover
+    options:
+    -
+        label: Fill the window
+        value: cover
+    -
+        label: Fit inside the window
+        value: contain
+    -
+        label: Natural size (tiled)
+        value: auto
+-
+    id: anp-custom-background-light-header
+    title: Light Mode
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: anp-background-image-light
+    title: Background image
+    description: 'A CSS image, usually url("https://link-to-image.png"). Defaults to a gradient built from the active palette'
+    type: variable-text
+    default: var(--anp-custom-bg-default-image)
+-
+    id: anp-custom-bg-brightness-light
+    title: Image brightness
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-saturation-light
+    title: Image saturation
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-blur-light
+    title: Image blur
+    type: variable-number-slider
+    default: 6
+    min: 0
+    max: 40
+    step: 1
+    format: px
+-
+    id: anp-custom-bg-tint-opacity-light
+    title: Background tint
+    description: Palette colour washed over the image, keeps text readable
+    type: variable-number-slider
+    default: 0.3
+    min: 0
+    max: 1
+    step: 0.05
+-
+    id: anp-custom-bg-pane-opacity-light
+    title: Pane opacity
+    description: How strongly the panes cover the image
+    type: variable-number-slider
+    default: 0.72
+    min: 0
+    max: 1
+    step: 0.05
+-
+    id: anp-custom-background-dark-header
+    title: Dark Mode
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: anp-background-image-dark
+    title: Background image
+    description: 'A CSS image, usually url("https://link-to-image.png"). Defaults to a gradient built from the active palette'
+    type: variable-text
+    default: var(--anp-custom-bg-default-image)
+-
+    id: anp-custom-bg-brightness-dark
+    title: Image brightness
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-saturation-dark
+    title: Image saturation
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-blur-dark
+    title: Image blur
+    type: variable-number-slider
+    default: 6
+    min: 0
+    max: 40
+    step: 1
+    format: px
+-
+    id: anp-custom-bg-tint-opacity-dark
+    title: Background tint
+    description: Palette colour washed over the image, keeps text readable
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+-
+    id: anp-custom-bg-pane-opacity-dark
+    title: Pane opacity
+    description: How strongly the panes cover the image
+    type: variable-number-slider
+    default: 0.6
+    min: 0
+    max: 1
+    step: 0.05
+
 # Workspace :: Workspace Layout
 
 -

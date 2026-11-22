@@ -115,6 +115,10 @@ When enabled, checkboxes can have more states than just checked and unchecked. T
 
 Originally adapted from Kepano's [Minimal](https://github.com/kepano/obsidian-minimal) theme, "colorful frame" add some pop to your vault by displaying your accent color Around the edges of the editor and preview panes. The accent color can be changed in the style settings.
 
+## Custom Background
+
+Put an image behind the interface and read the whole workspace through one frosted surface: the tab strip, the tabs, the view header, the ribbon and the editor all share a single pane colour instead of each painting its own. Turn it on under *Workspace → Custom Background* in the style settings, then set an image for light and dark mode (`url("https://link-to-image.png")`); the theme falls back to a gradient built from the active palette until you do. Image brightness, saturation, blur, the tint over the picture and the pane opacity can all be tuned, and the picture stays fixed while the workspace scrolls. A colourful frame keeps its own colours.
+
 ## Simplified markdown embeds
 
 Markdown embeds have an alternate styling with an animated variant which can be toggled globally using style settings or individually using alt names for embeds, for example: `![[embed|alt-name]]`

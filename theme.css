@@ -3554,6 +3554,147 @@ settings:
     type: variable-number
     default: 0.15
 
+# Workspace :: Custom Background
+
+-
+    id: anp-custom-background-header
+    title: Custom Background
+    description: Put an image behind the interface and float the panes over it
+    type: heading
+    level: 2
+    collapsed: true
+-
+    id: anp-background-image-toggle
+    title: Enable custom background
+    description: Panes become translucent so the image shows through. A colourful frame keeps its own colours
+    type: class-toggle
+-
+    id: anp-custom-bg-fit
+    title: Image fill
+    description: How the image covers the window
+    type: variable-select
+    default: cover
+    options:
+    -
+        label: Fill the window
+        value: cover
+    -
+        label: Fit inside the window
+        value: contain
+    -
+        label: Natural size (tiled)
+        value: auto
+-
+    id: anp-custom-background-light-header
+    title: Light Mode
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: anp-background-image-light
+    title: Background image
+    description: 'A CSS image, usually url("https://link-to-image.png"). Defaults to a gradient built from the active palette'
+    type: variable-text
+    default: var(--anp-custom-bg-default-image)
+-
+    id: anp-custom-bg-brightness-light
+    title: Image brightness
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-saturation-light
+    title: Image saturation
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-blur-light
+    title: Image blur
+    type: variable-number-slider
+    default: 6
+    min: 0
+    max: 40
+    step: 1
+    format: px
+-
+    id: anp-custom-bg-tint-opacity-light
+    title: Background tint
+    description: Palette colour washed over the image, keeps text readable
+    type: variable-number-slider
+    default: 0.3
+    min: 0
+    max: 1
+    step: 0.05
+-
+    id: anp-custom-bg-pane-opacity-light
+    title: Pane opacity
+    description: How strongly the panes cover the image
+    type: variable-number-slider
+    default: 0.72
+    min: 0
+    max: 1
+    step: 0.05
+-
+    id: anp-custom-background-dark-header
+    title: Dark Mode
+    type: heading
+    level: 3
+    collapsed: true
+-
+    id: anp-background-image-dark
+    title: Background image
+    description: 'A CSS image, usually url("https://link-to-image.png"). Defaults to a gradient built from the active palette'
+    type: variable-text
+    default: var(--anp-custom-bg-default-image)
+-
+    id: anp-custom-bg-brightness-dark
+    title: Image brightness
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-saturation-dark
+    title: Image saturation
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.05
+-
+    id: anp-custom-bg-blur-dark
+    title: Image blur
+    type: variable-number-slider
+    default: 6
+    min: 0
+    max: 40
+    step: 1
+    format: px
+-
+    id: anp-custom-bg-tint-opacity-dark
+    title: Background tint
+    description: Palette colour washed over the image, keeps text readable
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+-
+    id: anp-custom-bg-pane-opacity-dark
+    title: Pane opacity
+    description: How strongly the panes cover the image
+    type: variable-number-slider
+    default: 0.6
+    min: 0
+    max: 1
+    step: 0.05
+
 # Workspace :: Workspace Layout
 
 -
@@ -9049,6 +9190,168 @@ body.anp-colorful-frame.anp-border-layout.anp-mini-tab-toggle .workspace-tabs.mo
 body.anp-colorful-frame.anp-border-layout.anp-mini-tab-toggle .workspace-tabs.mod-top .workspace-tab-header-inner-close-button,
 body.anp-colorful-frame.anp-border-layout.anp-mini-tab-toggle .workspace-tabs.mod-top .workspace-tab-header-inner-icon {
   color: var(--background-primary);
+}
+
+/*--------------------CUSTOM BACKGROUND--------------------*/
+/* Adapted from AnuPpuccin's `custom-background` snippet
+   (AGPL-3.0, author: AnubisNekhet).
+   Re-implemented for NeoPpuccin: the image sits on its own fixed layer behind
+   the app, and the whole chrome — tab strip, tabs, view header, ribbon and
+   editor — shares ONE translucent surface painted over it, the same way the
+   colourful frame paints the frame from a single variable. */
+/* Palette-aware default, used until the user picks their own image. */
+body {
+  --anp-custom-bg-default-image: radial-gradient(
+          120% 120% at 8% 0%,
+          rgba(var(--ctp-mauve), 0.85) 0%,
+          transparent 52%
+      ),
+      radial-gradient(
+          120% 120% at 92% 4%,
+          rgba(var(--ctp-sapphire), 0.8) 0%,
+          transparent 48%
+      ),
+      linear-gradient(160deg, rgb(var(--ctp-mantle)), rgb(var(--ctp-crust)));
+}
+
+/* Resolve the per-mode settings into the variables the feature consumes. */
+body.theme-light {
+  --anp-custom-bg-image: var(
+      --anp-background-image-light,
+      var(--anp-custom-bg-default-image)
+  );
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-light, 1);
+  --anp-custom-bg-saturation: var(--anp-custom-bg-saturation-light, 1);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-light, 6px);
+  --anp-custom-bg-tint-opacity: var(--anp-custom-bg-tint-opacity-light, 0.3);
+  --anp-custom-bg-pane-opacity: var(--anp-custom-bg-pane-opacity-light, 0.72);
+}
+
+body.theme-dark {
+  --anp-custom-bg-image: var(
+      --anp-background-image-dark,
+      var(--anp-custom-bg-default-image)
+  );
+  --anp-custom-bg-brightness: var(--anp-custom-bg-brightness-dark, 1);
+  --anp-custom-bg-saturation: var(--anp-custom-bg-saturation-dark, 1);
+  --anp-custom-bg-blur: var(--anp-custom-bg-blur-dark, 6px);
+  --anp-custom-bg-tint-opacity: var(--anp-custom-bg-tint-opacity-dark, 0.25);
+  --anp-custom-bg-pane-opacity: var(--anp-custom-bg-pane-opacity-dark, 0.6);
+}
+
+body.anp-background-image-toggle {
+  /* The image lives on a dedicated layer so it can stay put while the
+     workspace scrolls. The container establishes a stacking context so the
+     layer stays inside the app instead of falling behind the window. */
+}
+body.anp-background-image-toggle .app-container {
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
+}
+body.anp-background-image-toggle .app-container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(var(--ctp-base), var(--anp-custom-bg-tint-opacity, 0.3)), rgba(var(--ctp-base), var(--anp-custom-bg-tint-opacity, 0.3))), var(--anp-custom-bg-image, var(--anp-custom-bg-default-image));
+  background-size: cover, var(--anp-custom-bg-fit, cover);
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  filter: brightness(var(--anp-custom-bg-brightness, 1)) saturate(var(--anp-custom-bg-saturation, 1)) blur(var(--anp-custom-bg-blur, 6px));
+  transform: scale(1.1);
+}
+body.anp-background-image-toggle {
+  /* ONE surface for the entire chrome, built from the active palette. Painted
+     exactly twice, on two elements that sit side by side and never overlap, so
+     no translucent layer ever stacks on another. Everything inside them is
+     transparent, which is what keeps the tab strip, the tabs, the view header
+     and the editor reading as the same pane. */
+  --anp-bg-surface: rgba(
+      var(--ctp-base),
+      var(--anp-custom-bg-pane-opacity, 0.6)
+  );
+  /* The status bar is a sibling of .horizontal-main-container, so it needs the
+     same surface painted on it or it shows the raw image instead. */
+}
+body.anp-background-image-toggle .horizontal-main-container,
+body.anp-background-image-toggle .status-bar {
+  background-color: var(--anp-bg-surface);
+}
+body.anp-background-image-toggle {
+  /* Obsidian and the theme paint most chrome from variables; point them all at
+     the surface (or at nothing) instead of listing selectors per layout. */
+  --tab-container-background: transparent;
+  --sidebar-tab-container-background: transparent;
+  --ribbon-background: transparent;
+  --ribbon-background-collapsed: transparent;
+  --titlebar-background: transparent;
+  --titlebar-background-focused: transparent;
+  --card-background-color: transparent;
+  --card-foreground-color: transparent;
+  --tab-background: transparent;
+  --tab-background-inactive: transparent;
+  --tab-inactive-color: transparent;
+  /* The active tab must read as the same pane as the editor, so it gets no fill
+     at all. This variable is also what Obsidian feeds into the two corner
+     fillers that draw the tab's shoulders, which is why a tinted value left a
+     square of colour hanging off each bottom corner: blanking it here removes
+     the fill and the corner squares in one move. The active tab is marked by
+     its outline and title colour instead. */
+  --tab-background-active: transparent;
+  /* Obsidian paints the view header from these variables, and the focused
+     window swaps to the second one under a four-class rule that outranks any
+     selector reset. They default to --background-primary, which is what kept a
+     dark band above the editor once the window took focus. */
+  --file-header-background: transparent;
+  --file-header-background-focused: transparent;
+  /* Surfaces that should stay visible as their own object keep a deliberate
+     second layer instead of inheriting the shared one. */
+  --code-background: rgba(
+      var(--ctp-crust),
+      var(--anp-custom-bg-pane-opacity, 0.6)
+  );
+  --blockquote-background-color: rgba(
+      var(--ctp-crust),
+      var(--anp-custom-bg-pane-opacity, 0.6)
+  );
+  /* Containers and panes drop every fill so nothing sits between the shared
+     surface and the text. Editor panes paint from --background-primary, hence
+     the extra step of specificity. */
+}
+body.anp-background-image-toggle .workspace,
+body.anp-background-image-toggle .workspace-split,
+body.anp-background-image-toggle .workspace-split .workspace-leaf,
+body.anp-background-image-toggle .workspace-split .workspace-leaf-content,
+body.anp-background-image-toggle .workspace-tabs,
+body.anp-background-image-toggle .workspace-tab-container,
+body.anp-background-image-toggle .workspace-tab-header-container,
+body.anp-background-image-toggle .workspace-tab-header,
+body.anp-background-image-toggle .workspace-tab-header-inner,
+body.anp-background-image-toggle .view-header,
+body.anp-background-image-toggle .view-header-title-container,
+body.anp-background-image-toggle .view-content,
+body.anp-background-image-toggle .workspace-split .view-content,
+body.anp-background-image-toggle .workspace-split.mod-root .view-content,
+body.anp-background-image-toggle .markdown-source-view,
+body.anp-background-image-toggle .markdown-preview-view,
+body.anp-background-image-toggle .markdown-reading-view,
+body.anp-background-image-toggle .cm-editor,
+body.anp-background-image-toggle .cm-scroller,
+body.anp-background-image-toggle .workspace-ribbon,
+body.anp-background-image-toggle .side-dock-ribbon,
+body.anp-background-image-toggle .workspace-sidedock-vault-profile,
+body.anp-background-image-toggle .kanban-plugin__lane,
+body.anp-background-image-toggle .kanban-plugin__item-content-wrapper {
+  background-color: transparent;
+}
+body.anp-background-image-toggle {
+  /* The view header draws its separator with a gradient mask, which shows up as
+     a stray patch once the surface behind it is translucent. */
+}
+body.anp-background-image-toggle .view-header-title-container:not(.mod-at-end)::after {
+  background-image: none;
 }
 
 /*------------CUSTOM CHECKBOXES-----------*/
