@@ -3659,11 +3659,11 @@ settings:
     level: 1
     collapsed: true
 -
-	id: neoppuccin-url-donate
-	title: Buy me a Coffee
-	description: "[https://ko-fi.com/erd](https://ko-fi.com/erd)"
-	type: info-text
-	markdown: true
+    id: neoppuccin-url-donate
+    title: Buy me a Coffee
+    description: "[https://ko-fi.com/erd](https://ko-fi.com/erd)"
+    type: info-text
+    markdown: true
 -
     id: neoppuccin-url-donate-anubis
     title: Buy Anubis, the developer of AnuPpuccin, a Coffee
