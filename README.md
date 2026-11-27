@@ -26,17 +26,22 @@ The theme supports the following colorschemes:
 - Coffee
 - Biscuit
 - Everforest
+- Flexoki
 - Dracula
 - Gruvbox
 - Nord (Nord Light, Nord Dark, Nord Darker)
 - Notion
 - Kanagawa
+- Luminescence
+- Material Gruvbox
+- Material Mint
 - Rosé Pine (Rosé Pine Dawn, Rosé Pine)
 - Rosebox
 - Royal Velvet
 - Sandy Beaches
 - Solarized
 - thorns
+- Tokyo Night
 - Generic (Dark, AMOLED Dark)
 
 ## Layouts
@@ -223,6 +228,10 @@ To compile the theme from source, you will need to have [Sass](https://sass-lang
 <img src="assets/colorschemes/everforest-dark.webp"/>
 </details>
 <details>
+<summary><h4>Flexoki</h4></summary>
+<img src="assets/colorschemes/flexoki-dark.webp"/>
+</details>
+<details>
 <summary><h4>Dracula</h4></summary>
 <img src="assets/colorschemes/dracula-dark.webp"/>
 </details>
@@ -234,7 +243,7 @@ To compile the theme from source, you will need to have [Sass](https://sass-lang
 <details>
 <summary><h4>Nord</h4></summary>
 <h4 align="center">Nord Light</h4>
-<img src="assets/colorschemes/nord-light-original.webp"/>
+<img src="assets/colorschemes/nord-light.webp"/>
 <h4 align="center">Nord Dark</h4>
 <img src="assets/colorschemes/nord-dark.webp"/>
 <h4 align="center">Nord Darker (Custom Palette)</h4>
@@ -248,6 +257,21 @@ To compile the theme from source, you will need to have [Sass](https://sass-lang
 <details>
 <summary><h4>Kanagawa</h4></summary>
 <img src="assets/colorschemes/kanagawa-dark.webp"/>
+</details>
+<details>
+<summary><h4>Luminescence</h4></summary>
+<img src="assets/colorschemes/luminescence-light.webp"/>
+</details>
+<details>
+<summary><h4>Material Gruvbox</h4></summary>
+<img src="assets/colorschemes/material-gruvbox-dark.webp"/>
+</details>
+<details>
+<summary><h4>Material Mint</h4></summary>
+<h4 align="center">Light</h4>
+<img src="assets/colorschemes/material-mint-light.webp"/>
+<h4 align="center">Dark</h4>
+<img src="assets/colorschemes/material-mint-dark.webp"/>
 </details>
 <details>
 <summary><h4>Rosebox</h4></summary>
@@ -272,6 +296,14 @@ To compile the theme from source, you will need to have [Sass](https://sass-lang
 <summary><h4>Solarized</h4></summary>
 <img src="assets/colorschemes/solarized-light.webp"/>
 <img src="assets/colorschemes/solarized-dark.webp"/>
+</details>
+<details>
+<summary><h4>thorns</h4></summary>
+<img src="assets/colorschemes/thorns-dark.webp"/>
+</details>
+<details>
+<summary><h4>Tokyo Night</h4></summary>
+<img src="assets/colorschemes/tokyo-night-dark.webp"/>
 </details>
 </details>
 
